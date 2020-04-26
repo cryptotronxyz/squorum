@@ -1,5 +1,6 @@
 // Copyright (c) 2018 The PIVX developers
 // Copyright (c) 2018-2020 The Helium developers
+// Copyright (c) 2020 The sQuorum developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -46,7 +47,7 @@ bool BlockToPubcoinList(const CBlock& block, std::list<libzerocoin::PublicCoin>&
         if(!tx.HasZerocoinMintOutputs())
             continue;
 
-        /* NOTE: GJH Inappropriate for Helium
+        /* NOTE: GJH Inappropriate for sQuorum
         // Filter out mints that have used invalid outpoints
         if (fFilterInvalid) {
             bool fValid = true;
@@ -62,7 +63,7 @@ bool BlockToPubcoinList(const CBlock& block, std::list<libzerocoin::PublicCoin>&
         uint256 txHash = tx.GetHash();
         */
         for (unsigned int i = 0; i < tx.vout.size(); i++) {
-            /* NOTE: GJH Inappropriate for Helium
+            /* NOTE: GJH Inappropriate for sQuorum
             //Filter out mints that use invalid outpoints - edge case: invalid spend with minted change
             if (fFilterInvalid && !ValidOutPoint(COutPoint(txHash, i), INT_MAX))
                 break;
@@ -90,7 +91,7 @@ bool BlockToZerocoinMintList(const CBlock& block, std::list<CZerocoinMint>& vMin
         if(!tx.HasZerocoinMintOutputs())
             continue;
 
-        /* NOTE: GJH Inappropriate for Helium
+        /* NOTE: GJH Inappropriate for sQuorum
         // Filter out mints that have used invalid outpoints
         if (fFilterInvalid) {
             bool fValid = true;
@@ -106,7 +107,7 @@ bool BlockToZerocoinMintList(const CBlock& block, std::list<CZerocoinMint>& vMin
         uint256 txHash = tx.GetHash();
         */
         for (unsigned int i = 0; i < tx.vout.size(); i++) {
-            /* NOTE: GJH Inappropriate for Helium
+            /* NOTE: GJH Inappropriate for sQuorum
             //Filter out mints that use invalid outpoints - edge case: invalid spend with minted change
             if (fFilterInvalid && !ValidOutPoint(COutPoint(txHash, i), INT_MAX))
                 break;
@@ -298,7 +299,7 @@ std::string ReindexZerocoinDB()
                                 libzerocoin::ZerocoinParams* params = Params().Zerocoin_Params(false);
                                 PublicCoinSpend publicSpend(params);
                                 CValidationState state;
-                                if (!ZHLMModule::ParseZerocoinPublicSpend(in, tx, state, publicSpend)){
+                                if (!ZSQRModule::ParseZerocoinPublicSpend(in, tx, state, publicSpend)){
                                     return _("Failed to parse public spend");
                                 }
                                 vSpendInfo.push_back(std::make_pair(publicSpend, txid));

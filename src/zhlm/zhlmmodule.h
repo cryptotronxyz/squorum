@@ -1,10 +1,11 @@
 // Copyright (c) 2019 The PIVX developers
 // Copyright (c) 2018-2020 The Helium developers
+// Copyright (c) 2020 The sQuorum developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 //
-#ifndef Helium_ZHLMMODULE_H
-#define Helium_ZHLMMODULE_H
+#ifndef sQuorum_ZSQRMODULE_H
+#define sQuorum_ZSQRMODULE_H
 
 #include "libzerocoin/bignum.h"
 #include "libzerocoin/Denominations.h"
@@ -73,7 +74,7 @@ public:
 
 class CValidationState;
 
-namespace ZHLMModule {
+namespace ZSQRModule {
     bool createInput(CTxIn &in, CZerocoinMint& mint, uint256 hashTxOut);
     PublicCoinSpend parseCoinSpend(const CTxIn &in);
     bool parseCoinSpend(const CTxIn &in, const CTransaction& tx, const CTxOut &prevOut, PublicCoinSpend& publicCoinSpend);
@@ -91,4 +92,4 @@ namespace ZHLMModule {
 };
 
 
-#endif //Helium_ZHLMMODULE_H
+#endif //sQuorum_ZSQRMODULE_H
