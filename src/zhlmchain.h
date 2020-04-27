@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef Helium_ZHLMCHAIN_H
-#define Helium_ZHLMCHAIN_H
+#ifndef Helium_ZSQRCHAIN_H
+#define Helium_ZSQRCHAIN_H
 
 #include "libzerocoin/Coin.h"
 #include "libzerocoin/Denominations.h"
@@ -40,4 +40,4 @@ bool TxOutToPublicCoin(const CTxOut& txout, libzerocoin::PublicCoin& pubCoin, CV
 std::list<libzerocoin::CoinDenomination> ZerocoinSpendListFromBlock(const CBlock& block, bool fFilterInvalid);
 
 
-#endif //Helium_ZHLMCHAIN_H
+#endif //Helium_ZSQRCHAIN_H

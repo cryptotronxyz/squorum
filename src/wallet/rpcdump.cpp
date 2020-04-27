@@ -81,7 +81,7 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw std::runtime_error(
-            "importprivkey \"heliumprivkey\" ( \"label\" rescan )\n"
+            "importprivkey \"squorumprivkey\" ( \"label\" rescan )\n"
             "\nAdds a private key (as returned by dumpprivkey) to your wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
@@ -471,8 +471,8 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw std::runtime_error(
-            "dumpprivkey \"heliumaddress\"\n"
-            "\nReveals the private key corresponding to 'heliumaddress'.\n"
+            "dumpprivkey \"squorumaddress\"\n"
+            "\nReveals the private key corresponding to 'squorumaddress'.\n"
             "Then the importprivkey can be used with this output\n" +
             HelpRequiringPassphrase() + "\n"
 
@@ -577,8 +577,8 @@ UniValue bip38encrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw std::runtime_error(
-            "bip38encrypt \"heliumaddress\" \"passphrase\"\n"
-            "\nEncrypts a private key corresponding to 'heliumaddress'.\n" +
+            "bip38encrypt \"squorumaddress\" \"passphrase\"\n"
+            "\nEncrypts a private key corresponding to 'squorumaddress'.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -623,7 +623,7 @@ UniValue bip38decrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw std::runtime_error(
-            "bip38decrypt \"heliumaddress\" \"passphrase\"\n"
+            "bip38decrypt \"squorumaddress\" \"passphrase\"\n"
             "\nDecrypts and then imports password protected private key.\n" +
             HelpRequiringPassphrase() + "\n"
 

@@ -92,7 +92,7 @@ UniValue preparebudget(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 6)
         throw std::runtime_error(
-            "preparebudget \"proposal-name\" \"url\" payment-count block-start \"helium-address\" monthy-payment\n"
+            "preparebudget \"proposal-name\" \"url\" payment-count block-start \"squorum-address\" monthy-payment\n"
             "\nPrepare proposal for network by signing and creating tx\n"
 
             "\nArguments:\n"
@@ -100,15 +100,15 @@ UniValue preparebudget(const UniValue& params, bool fHelp)
             "2. \"url\":            (string, required) URL of proposal details (64 character limit)\n"
             "3. payment-count:    (numeric, required) Total number of monthly payments\n"
             "4. block-start:      (numeric, required) Starting super block height\n"
-            "5. \"helium-address\":   (string, required) Helium address to send payments to\n"
+            "5. \"squorum-address\":   (string, required) Helium address to send payments to\n"
             "6. monthly-payment:  (numeric, required) Monthly payment amount\n"
 
             "\nResult:\n"
             "\"xxxx\"       (string) proposal fee hash (if successful) or error message (if failed)\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("preparebudget", "\"test-proposal\" \"https://forum.helium.org/t/test-proposal\" 2 820800 \"D9oc6C3dttUbv8zd7zGNq1qKBGf4ZQ1XEE\" 500") +
-            HelpExampleRpc("preparebudget", "\"test-proposal\" \"https://forum.helium.org/t/test-proposal\" 2 820800 \"D9oc6C3dttUbv8zd7zGNq1qKBGf4ZQ1XEE\" 500"));
+            HelpExampleCli("preparebudget", "\"test-proposal\" \"https://forum.squorum.org/t/test-proposal\" 2 820800 \"D9oc6C3dttUbv8zd7zGNq1qKBGf4ZQ1XEE\" 500") +
+            HelpExampleRpc("preparebudget", "\"test-proposal\" \"https://forum.squorum.org/t/test-proposal\" 2 820800 \"D9oc6C3dttUbv8zd7zGNq1qKBGf4ZQ1XEE\" 500"));
 
     if (!pwalletMain) {
         throw JSONRPCError(RPC_IN_WARMUP, "Try again after active chain is loaded");
@@ -145,7 +145,7 @@ UniValue preparebudget(const UniValue& params, bool fHelp)
     // }
 
     CWalletTx wtx;
-    if (!pwalletMain->GetBudgetSystemCollateralTX(wtx, budgetProposalBroadcast.GetHash(), useIX)) { // 50 HLM collateral for proposal
+    if (!pwalletMain->GetBudgetSystemCollateralTX(wtx, budgetProposalBroadcast.GetHash(), useIX)) { // 50 SQR collateral for proposal
         throw std::runtime_error("Error making collateral transaction for proposal. Please check your wallet balance.");
     }
 
@@ -161,7 +161,7 @@ UniValue submitbudget(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 7)
         throw std::runtime_error(
-            "submitbudget \"proposal-name\" \"url\" payment-count block-start \"helium-address\" monthly-payment \"fee-tx\"\n"
+            "submitbudget \"proposal-name\" \"url\" payment-count block-start \"squorum-address\" monthly-payment \"fee-tx\"\n"
             "\nSubmit proposal to the network\n"
 
             "\nArguments:\n"

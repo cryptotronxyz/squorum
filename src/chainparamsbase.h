@@ -11,7 +11,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between helium-cli and heliumd)
+ * CBaseChainParams defines the base parameters (shared between squorum-cli and squorumd)
  * of a given instance of the Helium system.
  */
 class CBaseChainParams

@@ -1,4 +1,4 @@
-Source: helium
+Source: squorum
 Section: utils
 Priority: optional
 Maintainer: Fuzzbawls <fuzzbawls@gmail.com>
@@ -29,10 +29,10 @@ Build-Depends: debhelper,
  dh-systemd
 Standards-Version: 3.9.2
 Homepage: http://www.heliumchain.org
-Vcs-Git: git://github.com/heliumchain/helium
-Vcs-Browser: http://github.com/heliumchain/helium
+Vcs-Git: git://github.com/akcryptoguy/squorum
+Vcs-Browser: http://github.com/akcryptoguy/squorum
 
-Package: heliumd
+Package: squorumd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
@@ -45,10 +45,10 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 10+ GB of space, slowly growing.
  .
- This package provides the daemon, heliumd, and the CLI tool
- helium-cli to interact with the daemon.
+ This package provides the daemon, squorumd, and the CLI tool
+ squorum-cli to interact with the daemon.
 
-Package: helium-qt
+Package: squorum-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
@@ -61,4 +61,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 10+ GB of space, slowly growing.
  .
- This package provides Helium-Qt, a GUI for Helium based on Qt.
+ This package provides sQuorum-Qt, a GUI for Helium based on Qt.

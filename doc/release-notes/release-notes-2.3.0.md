@@ -1,33 +1,33 @@
-Helium Core version 2.3.0 is now available from:
+sQuorum Core version 2.3.0 is now available from:
 
-  <https://github.com/heliumchain/helium/releases>
+  <https://github.com/akcryptoguy/squorum/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/heliumchain/helium/issues>
+  <https://github.com/akcryptoguy/squorum/issues>
 
 Mandatory Update
 ==============
 
-Helium Core v2.3.0 is a mandatory update for all users. This release contains validation and security improvements that are not backwards compatible with older versions. Users will have a grace period of no less than two weeks to update their clients before enforcement of this update is enabled.
+sQuorum Core v2.3.0 is a mandatory update for all users. This release contains validation and security improvements that are not backwards compatible with older versions. Users will have a grace period of no less than two weeks to update their clients before enforcement of this update is enabled.
 
 How to Upgrade
 --------------
 
-If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/Helium-Qt (on Mac) or heliumd/helium-qt (on Linux).
+If you are running an older version, shut it down. Wait until it has completely shut down (which might take a few minutes for older versions), then run the installer (on Windows) or just copy over /Applications/sQuorum-Qt (on Mac) or squorumd/squorum-qt (on Linux).
 
 
 Compatibility
 ==============
 
-Helium Core is extensively tested on multiple operating systems using the Linux kernel, macOS 10.8+, and Windows Vista and later.
+sQuorum Core is extensively tested on multiple operating systems using the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support), No attempt is made to prevent installing or running the software on Windows XP, you can still do so at your own risk but be aware that there are known instabilities and issues. Please do not report issues about Windows XP to the issue tracker.
 
-Helium Core should also work on most other Unix-like systems but is not frequently tested on them.
+sQuorum Core should also work on most other Unix-like systems but is not frequently tested on them.
 
 Notable Changes
 ===============
@@ -120,7 +120,7 @@ The third parameter indicates if the wallet should be unlocked for staking and a
 ZeroMQ (ZMQ) Notifications
 --------------
 
-heliumd can now (optionally) asynchronously notify clients through a ZMQ-based PUB socket of the arrival of new transactions and blocks. This feature requires installation of the ZMQ C API library 4.x and configuring its use through the command line or configuration file. Please see [docs/zmq.md](/doc/zmq.md) for details of operation.
+squorumd can now (optionally) asynchronously notify clients through a ZMQ-based PUB socket of the arrival of new transactions and blocks. This feature requires installation of the ZMQ C API library 4.x and configuring its use through the command line or configuration file. Please see [docs/zmq.md](/doc/zmq.md) for details of operation.
 
 **All** Masternodes List GUI Removal
 --------------
@@ -132,7 +132,7 @@ Note that the GUI list of masternodes associated with a controller wallet remain
 SPV Client Support
 --------------
 
-Helium Core now enables bloom filters by default to support SPV clients like mobile wallets. This feature can be disabled by using the `-peerbloomfilters` option on startup.
+sQuorum Core now enables bloom filters by default to support SPV clients like mobile wallets. This feature can be disabled by using the `-peerbloomfilters` option on startup.
 
 2.3.0 Change log
 =================
@@ -195,4 +195,4 @@ Thanks to everyone who directly contributed to this release:
 - furszy
 - presstab
 
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/helium-project/helium-wallet/).
+As well as everyone that helped translating on [Transifex](https://www.transifex.com/squorum-project/squorum-wallet/).

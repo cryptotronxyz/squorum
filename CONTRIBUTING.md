@@ -1,7 +1,7 @@
-Contributing to Helium Core
+Contributing to sQuorum Core
 ============================
 
-The Helium Core project operates an open contributor model where anyone is
+The sQuorum Core project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -59,7 +59,7 @@ the pull request affects. Valid areas as:
 
   - *Consensus* for changes to consensus critical code
   - *Docs* for changes to the documentation
-  - *Qt* for changes to helium-qt
+  - *Qt* for changes to squorum-qt
   - *Minting* for changes to the minting code
   - *Net* or *P2P* for changes to the peer-to-peer network code
   - *RPC/REST* for changes to the RPC or REST APIs
@@ -84,7 +84,7 @@ Examples:
     Trivial: Fix typo in init.cpp
 
 Note that translations should not be submitted as pull requests, please see
-[Translation Process](https://github.com/heliumchain/helium/blob/master/doc/translation_process.md)
+[Translation Process](https://github.com/akcryptoguy/squorum/blob/master/doc/translation_process.md)
 for more information on helping with translations.
 
 If a pull request is not to be considered for merging (yet), please
@@ -203,10 +203,10 @@ workload on reviewing.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the Helium Core project, and is not to be
+The following applies to code changes to the sQuorum Core project, and is not to be
 confused with overall Helium Network Protocol consensus changes.
 
-Whether a pull request is merged into Helium Core rests with the project merge
+Whether a pull request is merged into sQuorum Core rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -303,7 +303,7 @@ about:
 Release Policy
 --------------
 
-The project leader is the release manager for each Helium Core release.
+The project leader is the release manager for each sQuorum Core release.
 
 Copyright
 ---------
