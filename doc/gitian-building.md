@@ -76,7 +76,7 @@ Where `bubba` is your Github name and `0.14.10` is the most recent tag (without 
 In order to sign gitian builds on your host machine, which has your PGP key, fork the gitian.sigs repository and clone it on your host machine:
 
 ```
-git clone git@github.com:squorumchain/gitian.sigs.git
+git clone git@github.com:heliumchain/gitian.sigs.git
 git remote add bubba git@github.com:bubba/gitian.sigs.git
 ```
 
@@ -104,7 +104,7 @@ gpg --output $VERSION-win-unsigned/$NAME/squorum-win-$BUILD-build.assert.sig --d
 ```
 
 Make a PR (both the `.assert` and `.assert.sig` files) to the
-[squorumchain/gitian.sigs](https://github.com/squorumchain/gitian.sigs/) repository:
+[heliumchain/gitian.sigs](https://github.com/heliumchain/gitian.sigs/) repository:
 
 ```
 git checkout -b 0.14.10-not-codesigned
