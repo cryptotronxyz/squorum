@@ -105,7 +105,7 @@ def setup_darwin():
 
 def setup_repos():
     if not os.path.isdir('gitian.sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/squorumchain/gitian.sigs.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/heliumchain/gitian.sigs.git'])
     if not os.path.isdir('helium-detached-sigs'):
         subprocess.check_call(['git', 'clone', 'https://github.com/heliumchain/helium-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
